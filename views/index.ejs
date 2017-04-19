@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <title>Chat Application</title>
+  <link rel='stylesheet' href='stylesheets/style.css' type='text/css'/>
+</head>
+<body>
+<div>
+  <!-- This is where the messages will be added -->
+<ul id="messages"></ul>
+<span id="notifyUser"></span>
+<form id="form" action="" onsubmit="return submitfunction();" >
+  <!-- Hidden input is used to hold the username -->
+  <input type="hidden" id="user" value="" />
+  <input id="m" autocomplete="off" onkeyup="notifyTyping();" placeholder="Type your message here..." />
+  <input type="submit" id="button" value="Send"/>
+</form>
+</div>
+<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="javascripts/chat.js"></script>
+</body>
+</html>
